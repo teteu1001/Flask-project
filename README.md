@@ -97,21 +97,4 @@ DATABASE_URL = 'sqlite:///instance/database.db'
 4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
 
-## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👤 Autor
-
-**[Seu Nome](https://github.com/teteu1001)**
-
-- GitHub: [@teteu1001](https://github.com/teteu1001)
-
-## 🙏 Agradecimentos
-
-- À comunidade Flask pela documentação excelente
-- Aos contribuidores das bibliotecas utilizadas
-
----
-
-⭐ Se este projeto foi útil para você, deixe uma estrela!
