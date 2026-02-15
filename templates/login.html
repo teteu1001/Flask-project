@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="{{ url_for('login') }}">
+            <h1>Entrar na Plataforma</h1>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" style="padding: 10px; margin-bottom: 15px; border-radius: 5px; background-color: {% if category == 'error' %}#f8d7da{% else %}#d4edda{% endif %}; color: {% if category == 'error' %}#721c24{% else %}#155724{% endif %};">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <div class="input-container">
+                <input name="email" placeholder="Email" type="email" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/user--v1.png" alt="user icon" />
+            </div>
+    
+            <div class="input-container">
+                <input name="password" placeholder="Senha" type="password" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/password--v1.png" alt="password icon" />
+            </div>
+    
+            <div class="esqueci">
+                <a href="#">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <div class="register">
+                <p>Não está cadastrado? <a href="#">Cadastro</a></p>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
